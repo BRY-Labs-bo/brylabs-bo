@@ -46,8 +46,10 @@ const services: Service[] = [
 
 export function Services() {
   return (
-    <section id="servicios" className="py-24 md:py-32 bg-surface border-y border-border">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="servicios" className="relative py-24 md:py-32 bg-surface/40 border-y border-border overflow-hidden">
+      <div aria-hidden className="absolute inset-0 bg-grid bg-grid-fade opacity-50 pointer-events-none" />
+
+      <div className="relative mx-auto max-w-6xl px-6">
         <SectionLabel>Servicios</SectionLabel>
         <h2 className="mt-5 font-display font-bold text-[clamp(1.75rem,3.5vw,2.5rem)]">
           Lo que construimos.
@@ -57,9 +59,9 @@ export function Services() {
           {services.map(({ icon: Icon, title, desc }) => (
             <article
               key={title}
-              className="group rounded-xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/40 hover:shadow-elevated hover:-translate-y-0.5"
+              className="gradient-border group relative rounded-xl border border-border bg-card/70 backdrop-blur p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated hover:border-primary/30"
             >
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary-soft text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <div className="relative inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary-soft text-primary border border-primary/20 transition-all group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_24px_oklch(0.64_0.19_256/0.5)]">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="mt-5 font-display font-semibold text-lg text-foreground">
