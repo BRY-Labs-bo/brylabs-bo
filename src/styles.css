@@ -1,12 +1,12 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: 'Sora', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-sans: 'DM Sans', system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -18,6 +18,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -26,10 +27,12 @@
   --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-soft: var(--primary-soft);
+  --color-accent-cyan: var(--accent-cyan);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-muted-foreground-2: var(--muted-foreground-2);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
@@ -43,37 +46,42 @@
 :root {
   --radius: 0.625rem;
 
-  --background: oklch(0.995 0.002 250);
-  --surface: oklch(0.975 0.005 250);
-  --foreground: oklch(0.18 0.03 260);
+  /* Dark intermediate palette — navy/slate */
+  --background: oklch(0.21 0.035 256);          /* ~ #0F172A */
+  --surface: oklch(0.255 0.038 256);            /* ~ #1A2332 */
+  --surface-2: oklch(0.30 0.04 256);            /* ~ #263247 */
+  --foreground: oklch(0.965 0.008 250);         /* ~ #F1F5F9 */
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 260);
+  --card: oklch(0.255 0.038 256);
+  --card-foreground: oklch(0.965 0.008 250);
+  --popover: oklch(0.255 0.038 256);
+  --popover-foreground: oklch(0.965 0.008 250);
 
-  --primary: oklch(0.55 0.22 264);
-  --primary-hover: oklch(0.48 0.22 264);
+  --primary: oklch(0.64 0.19 256);              /* ~ #3B82F6 */
+  --primary-hover: oklch(0.58 0.20 256);        /* ~ #2563EB */
   --primary-foreground: oklch(0.99 0 0);
-  --primary-soft: oklch(0.965 0.025 255);
+  --primary-soft: oklch(0.64 0.19 256 / 0.12);
+  --accent-cyan: oklch(0.75 0.13 240);          /* ~ #60A5FA */
 
-  --secondary: oklch(0.96 0.008 250);
-  --secondary-foreground: oklch(0.2 0.03 260);
-  --muted: oklch(0.965 0.006 250);
-  --muted-foreground: oklch(0.55 0.025 255);
-  --accent: oklch(0.965 0.025 255);
-  --accent-foreground: oklch(0.35 0.18 264);
+  --secondary: oklch(0.30 0.04 256);
+  --secondary-foreground: oklch(0.965 0.008 250);
+  --muted: oklch(0.30 0.04 256);
+  --muted-foreground: oklch(0.72 0.025 250);    /* ~ #94A3B8 */
+  --muted-foreground-2: oklch(0.60 0.03 256);   /* ~ #64748B */
+  --accent: oklch(0.30 0.04 256);
+  --accent-foreground: oklch(0.85 0.10 256);
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.92 0.01 250);
-  --border-strong: oklch(0.86 0.012 250);
-  --input: oklch(0.92 0.01 250);
-  --ring: oklch(0.55 0.22 264);
+  --border: oklch(1 0 0 / 0.08);
+  --border-strong: oklch(1 0 0 / 0.14);
+  --input: oklch(1 0 0 / 0.10);
+  --ring: oklch(0.64 0.19 256);
 
-  --shadow-soft: 0 1px 2px 0 oklch(0.2 0.03 260 / 0.04), 0 1px 3px 0 oklch(0.2 0.03 260 / 0.06);
-  --shadow-elevated: 0 10px 30px -12px oklch(0.55 0.22 264 / 0.18), 0 4px 12px -4px oklch(0.2 0.03 260 / 0.08);
+  --shadow-soft: 0 1px 2px 0 rgb(0 0 0 / 0.25), 0 1px 3px 0 rgb(0 0 0 / 0.20);
+  --shadow-elevated: 0 12px 40px -8px oklch(0.64 0.19 256 / 0.35), 0 4px 16px -4px rgb(0 0 0 / 0.4);
+  --shadow-glow: 0 0 60px oklch(0.64 0.19 256 / 0.25);
 }
 
 @layer base {
@@ -98,23 +106,68 @@
 
 @layer utilities {
   .font-display { font-family: var(--font-display); }
+
   .bg-grid {
     background-image:
-      linear-gradient(to right, oklch(0.55 0.22 264 / 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, oklch(0.55 0.22 264 / 0.06) 1px, transparent 1px);
+      linear-gradient(to right, oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(1 0 0 / 0.04) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .bg-grid-fade {
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   }
+  .bg-dots {
+    background-image: radial-gradient(oklch(1 0 0 / 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
   .text-balance { text-wrap: balance; }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, oklch(0.64 0.19 256 / 0.5), oklch(0.75 0.13 240 / 0.2) 50%, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gradient-border:hover::before { opacity: 1; }
 
   @keyframes reveal-up {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-reveal { animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+  .animate-float { animation: float-y 5s ease-in-out infinite; }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+  .animate-pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(8px, -12px); }
+  }
+  .animate-drift { animation: drift 9s ease-in-out infinite; }
 }

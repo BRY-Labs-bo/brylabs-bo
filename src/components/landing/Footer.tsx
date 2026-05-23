@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border bg-surface/40">
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <a href="#top" className="font-display font-bold text-lg tracking-tight">
+        <a href="#top" className="font-display font-extrabold text-lg tracking-tight text-foreground">
           BRY<span className="text-primary">.</span>Labs
         </a>
 
@@ -13,7 +13,7 @@ export function Footer() {
           <li><a href="#" className="hover:text-foreground">Política de privacidad</a></li>
         </ul>
 
-        <p className="text-xs text-muted-foreground">
+        <p className="text-xs text-muted-foreground-2">
           brylabs.bo · La Paz, Bolivia · © 2026 BRY Labs
         </p>
       </div>
