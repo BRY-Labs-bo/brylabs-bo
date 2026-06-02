@@ -36,7 +36,7 @@ export function Contact() {
           {/* contact info */}
           <div className="space-y-4">
             <a
-              href="mailto:hola@brylabs.bo"
+              href="mailto:contacto@brylabs.bo"
               className="group flex items-center gap-4 rounded-xl border border-border bg-card/70 backdrop-blur p-5 hover:border-primary/40 hover:shadow-elevated transition-all"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-soft text-primary border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -47,7 +47,7 @@ export function Contact() {
                   Email
                 </div>
                 <div className="font-display font-semibold text-foreground">
-                  hola@brylabs.bo
+                  contacto@brylabs.bo
                 </div>
               </div>
               <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
