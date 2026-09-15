@@ -1,4 +1,4 @@
-import { Bell, KeyRound, ShieldCheck, MailCheck } from "lucide-react";
+import { Bell, KeyRound, ShieldCheck } from "lucide-react";
 import { SectionLabel } from "./SectionLabel";
 
 const platforms = [
