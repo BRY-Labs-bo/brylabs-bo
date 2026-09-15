@@ -28,14 +28,16 @@ const questions = [
   },
   {
     question: "¿Cómo empiezo?",
-    answer:
-      "Escribinos por WhatsApp al +591 64133771 y agendamos una demo de 30 minutos.",
+    answer: "Escribinos por WhatsApp al +591 64133771 y agendamos una demo de 30 minutos.",
   },
 ];
 
 export function Faq() {
   return (
-    <section id="preguntas" className="relative border-y border-border bg-surface/40 py-24 md:py-32">
+    <section
+      id="preguntas"
+      className="relative border-y border-border bg-surface/40 py-24 md:py-32"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel>Preguntas frecuentes</SectionLabel>
         <h2 className="mt-5 max-w-2xl font-display text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold">
@@ -47,7 +49,9 @@ export function Faq() {
             <details key={question} className="group border-b border-border py-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display font-semibold text-foreground">
                 {question}
-                <span className="text-xl font-normal text-primary transition-transform group-open:rotate-45">+</span>
+                <span className="text-xl font-normal text-primary transition-transform group-open:rotate-45">
+                  +
+                </span>
               </summary>
               <p className="mt-3 pr-8 text-sm leading-relaxed text-muted-foreground">{answer}</p>
             </details>

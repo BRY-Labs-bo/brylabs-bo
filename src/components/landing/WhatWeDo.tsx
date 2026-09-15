@@ -2,12 +2,36 @@ import { Building2, Cloud, MonitorSmartphone, ShieldCheck, Cpu, Handshake } from
 import { SectionLabel } from "./SectionLabel";
 
 const steps = [
-  { icon: Building2, title: "Hecho en La Paz - Bolivia", desc: "Conocemos la normativa y la realidad empresarial boliviana." },
-  { icon: Cloud, title: "Cloud o instalación propia", desc: "Elegí la modalidad que mejor se adapte a tu empresa." },
-  { icon: MonitorSmartphone, title: "Multi-dispositivo", desc: "Accedé desde computadora, tablet o celular." },
-  { icon: ShieldCheck, title: "Seguro por diseño", desc: "Roles, permisos y trazabilidad para proteger tu operación." },
-  { icon: Cpu, title: "Stack moderno", desc: "Una plataforma rápida, estable y preparada para crecer." },
-  { icon: Handshake, title: "Onboarding acompañado", desc: "Te ayudamos a configurar, migrar y poner en marcha el sistema." },
+  {
+    icon: Building2,
+    title: "Hecho en La Paz - Bolivia",
+    desc: "Conocemos la normativa y la realidad empresarial boliviana.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud o instalación propia",
+    desc: "Elegí la modalidad que mejor se adapte a tu empresa.",
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Multi-dispositivo",
+    desc: "Accedé desde computadora, tablet o celular.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Seguro por diseño",
+    desc: "Roles, permisos y trazabilidad para proteger tu operación.",
+  },
+  {
+    icon: Cpu,
+    title: "Stack moderno",
+    desc: "Una plataforma rápida, estable y preparada para crecer.",
+  },
+  {
+    icon: Handshake,
+    title: "Onboarding acompañado",
+    desc: "Te ayudamos a configurar, migrar y poner en marcha el sistema.",
+  },
 ];
 
 export function WhatWeDo() {
@@ -17,8 +41,7 @@ export function WhatWeDo() {
         aria-hidden
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-3xl pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse, oklch(0.64 0.19 256 / 0.10), transparent 70%)",
+          background: "radial-gradient(ellipse, oklch(0.64 0.19 256 / 0.10), transparent 70%)",
         }}
       />
 
@@ -30,7 +53,10 @@ export function WhatWeDo() {
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map(({ icon: Icon, title, desc }) => (
-            <article key={title} className="gradient-border rounded-xl border border-border bg-surface/60 p-7">
+            <article
+              key={title}
+              className="gradient-border rounded-xl border border-border bg-surface/60 p-7"
+            >
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-primary/20 bg-primary-soft text-primary">
                 <Icon className="h-5 w-5" />
               </div>

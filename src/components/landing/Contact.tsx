@@ -28,7 +28,8 @@ export function Contact() {
           Hablemos.
         </h2>
         <p className="mt-4 max-w-2xl text-muted-foreground text-base md:text-lg">
-          ¿Listo para modernizar tu negocio? Agendemos una demo y veamos qué solución se adapta mejor a tu empresa.
+          ¿Listo para modernizar tu negocio? Agendemos una demo y veamos qué solución se adapta
+          mejor a tu empresa.
         </p>
 
         <div className="mt-14 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -42,9 +43,7 @@ export function Contact() {
                 <Mail className="h-5 w-5" />
               </span>
               <div className="flex-1">
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                  Email
-                </div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
                 <div className="font-display font-semibold text-foreground">
                   contacto@brylabs.bo
                 </div>
@@ -63,9 +62,7 @@ export function Contact() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">
                   WhatsApp
                 </div>
-                <div className="font-display font-semibold text-foreground">
-                  +591 64133771
-                </div>
+                <div className="font-display font-semibold text-foreground">+591 64133771</div>
               </div>
               <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
             </a>
@@ -81,14 +78,28 @@ export function Contact() {
             className="rounded-2xl border border-border bg-card/80 backdrop-blur p-6 md:p-8 shadow-elevated space-y-4"
           >
             <Field label="Nombre" htmlFor="name">
-              <input id="name" name="name" required placeholder="Tu nombre" className="form-input" />
+              <input
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+                className="form-input"
+              />
             </Field>
             <Field label="Email o WhatsApp" htmlFor="contact">
-              <input id="contact" name="contact" required placeholder="hola@empresa.com" className="form-input" />
+              <input
+                id="contact"
+                name="contact"
+                required
+                placeholder="hola@empresa.com"
+                className="form-input"
+              />
             </Field>
             <Field label="¿Qué necesitás?" htmlFor="need">
               <select id="need" name="need" defaultValue="" required className="form-input">
-                <option value="" disabled>Seleccioná una opción</option>
+                <option value="" disabled>
+                  Seleccioná una opción
+                </option>
                 <option>Scibol ERP</option>
                 <option>Facturalo</option>
                 <option>Plataformas BRY Labs</option>

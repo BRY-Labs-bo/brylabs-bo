@@ -24,7 +24,7 @@ export function Projects() {
 
         <article className="mt-14 block overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur transition-all duration-300 hover:border-primary/40 hover:shadow-elevated">
           <div className="grid md:grid-cols-5">
-               {/* visual — fiscal document */}
+            {/* visual — fiscal document */}
             <div className="md:col-span-2 relative aspect-[4/3] md:aspect-auto overflow-hidden border-b md:border-b-0 md:border-r border-border bg-[oklch(0.18_0.035_256)]">
               <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
               <div
@@ -42,7 +42,9 @@ export function Projects() {
                   <div className="flex h-full w-full flex-col gap-4 rounded-md border border-border bg-card p-4">
                     <div className="flex items-center justify-between">
                       <FileCheck2 className="h-7 w-7 text-primary" />
-                      <span className="text-[8px] font-bold uppercase text-primary">Factura en línea</span>
+                      <span className="text-[8px] font-bold uppercase text-primary">
+                        Factura en línea
+                      </span>
                     </div>
                     <div className="space-y-2">
                       <span className="block h-1.5 w-full rounded bg-border-strong" />
@@ -53,7 +55,9 @@ export function Projects() {
                       <div className="text-[10px] font-bold text-foreground">Bs. 1.249,00</div>
                       <QrCode className="h-12 w-12 text-foreground" />
                     </div>
-                    <div className="text-[7px] text-muted-foreground">Documento fiscal validado por el SIN</div>
+                    <div className="text-[7px] text-muted-foreground">
+                      Documento fiscal validado por el SIN
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,8 +84,8 @@ export function Projects() {
                 Facturalo
               </h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Cubre 13 tipos de documento fiscal del SIN y centraliza todo el proceso
-                de emisión, firma, validación y seguimiento.
+                Cubre 13 tipos de documento fiscal del SIN y centraliza todo el proceso de emisión,
+                firma, validación y seguimiento.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">

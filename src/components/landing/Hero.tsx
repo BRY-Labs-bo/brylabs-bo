@@ -12,16 +12,14 @@ export function Hero() {
         aria-hidden
         className="absolute top-1/3 right-0 w-[700px] h-[700px] rounded-full pointer-events-none blur-3xl"
         style={{
-          background:
-            "radial-gradient(circle, oklch(0.64 0.19 256 / 0.25), transparent 70%)",
+          background: "radial-gradient(circle, oklch(0.64 0.19 256 / 0.25), transparent 70%)",
         }}
       />
       <div
         aria-hidden
         className="absolute -top-20 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none blur-3xl"
         style={{
-          background:
-            "radial-gradient(circle, oklch(0.75 0.13 240 / 0.12), transparent 70%)",
+          background: "radial-gradient(circle, oklch(0.75 0.13 240 / 0.12), transparent 70%)",
         }}
       />
 
@@ -37,8 +35,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground text-balance">
-            ERP integrado, facturación electrónica SIN e identidad centralizada. Todo en
-            una plataforma moderna, multi-empresa y multi-sucursal, desde La Paz para toda Bolivia.
+            ERP integrado, facturación electrónica SIN e identidad centralizada. Todo en una
+            plataforma moderna, multi-empresa y multi-sucursal, desde La Paz para toda Bolivia.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-4">
@@ -109,17 +107,12 @@ export function Hero() {
                     { icon: Activity, label: "Facturas", v: "2,341" },
                     { icon: Zap, label: "Sucursales", v: "12" },
                   ].map(({ icon: Icon, label, v }) => (
-                    <div
-                      key={label}
-                      className="rounded-lg border border-border bg-surface/60 p-3"
-                    >
+                    <div key={label} className="rounded-lg border border-border bg-surface/60 p-3">
                       <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-muted-foreground">
                         <Icon className="w-3 h-3 text-primary" />
                         {label}
                       </div>
-                      <div className="mt-1 font-display font-bold text-foreground text-sm">
-                        {v}
-                      </div>
+                      <div className="mt-1 font-display font-bold text-foreground text-sm">{v}</div>
                     </div>
                   ))}
                 </div>
@@ -150,18 +143,14 @@ export function Hero() {
                     <span className="text-accent-cyan">SIN</span>{" "}
                     <span className="text-primary">conectado</span> · CUFD vigente
                   </div>
-                  <div className="text-muted-foreground">
-                    → Documentos emitidos correctamente
-                  </div>
+                  <div className="text-muted-foreground">→ Documentos emitidos correctamente</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* floating chips */}
-          <div
-            className="hidden md:flex absolute -left-6 top-1/3 items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 shadow-elevated animate-drift"
-          >
+          <div className="hidden md:flex absolute -left-6 top-1/3 items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 shadow-elevated animate-drift">
             <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.7_0.16_150)] animate-pulse-dot" />
             <span className="text-[10px] font-medium text-foreground">Sistema disponible</span>
           </div>

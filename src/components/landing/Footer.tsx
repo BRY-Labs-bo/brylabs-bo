@@ -7,10 +7,26 @@ export function Footer() {
         </a>
 
         <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-          <li><a href="#productos" className="hover:text-foreground">Productos</a></li>
-          <li><a href="#por-que" className="hover:text-foreground">Por qué BRY Labs</a></li>
-          <li><a href="#contacto" className="hover:text-foreground">Contacto</a></li>
-          <li><a href="#" className="hover:text-foreground">Política de privacidad</a></li>
+          <li>
+            <a href="#productos" className="hover:text-foreground">
+              Productos
+            </a>
+          </li>
+          <li>
+            <a href="#por-que" className="hover:text-foreground">
+              Por qué BRY Labs
+            </a>
+          </li>
+          <li>
+            <a href="#contacto" className="hover:text-foreground">
+              Contacto
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-foreground">
+              Política de privacidad
+            </a>
+          </li>
         </ul>
 
         <p className="text-xs text-muted-foreground-2">

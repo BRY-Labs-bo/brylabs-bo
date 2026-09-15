@@ -29,8 +29,12 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex flex-col font-display text-foreground">
-          <span className="text-lg font-extrabold leading-none">BRY <span className="text-primary">Labs</span></span>
-          <span className="mt-1 text-[9px] font-medium uppercase text-muted-foreground">Business Result Yield</span>
+          <span className="text-lg font-extrabold leading-none">
+            BRY <span className="text-primary">Labs</span>
+          </span>
+          <span className="mt-1 text-[9px] font-medium uppercase text-muted-foreground">
+            Business Result Yield
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
