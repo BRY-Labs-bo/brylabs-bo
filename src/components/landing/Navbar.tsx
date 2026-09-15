@@ -28,12 +28,10 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex flex-col font-display text-foreground">
-          <span className="text-lg font-extrabold leading-none">
+        <a href="#top" className="font-display text-foreground">
+          <span className="text-sm font-extrabold leading-none sm:text-base">
             BRY <span className="text-primary">Labs</span>
-          </span>
-          <span className="mt-1 text-[9px] font-medium uppercase text-muted-foreground">
-            Business Result Yield
+            <span className="font-medium text-muted-foreground"> — Business Result Yield</span>
           </span>
         </a>
 
