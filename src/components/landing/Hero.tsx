@@ -35,8 +35,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground text-balance">
-            ERP integrado, facturación electrónica SIN e identidad centralizada. Todo en una
-            plataforma moderna, multi-empresa y multi-sucursal, desde La Paz para toda Bolivia.
+            ERP integrado, facturación electrónica SIN, live commerce, ticketing y soluciones
+            digitales modulares. Desde La Paz para toda Bolivia.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-4">
@@ -58,9 +58,9 @@ export function Hero() {
           {/* stats */}
           <div className="mt-14 border-t border-border pt-8 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
             {[
-              { k: "2", v: "Productos empresariales" },
+               { k: "8", v: "Soluciones modulares" },
               { k: "13", v: "Documentos fiscales" },
-              { k: "BOL", v: "Hecho para Bolivia" },
+               { k: "LPB", v: "Hecho en La Paz" },
             ].map((s) => (
               <div key={s.v} className="text-left">
                 <div className="font-display font-extrabold text-2xl md:text-3xl text-foreground">
