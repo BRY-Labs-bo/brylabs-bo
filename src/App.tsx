@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { WhatWeDo } from "@/components/landing/WhatWeDo";
 import { Services } from "@/components/landing/Services";
 import { Projects } from "@/components/landing/Projects";
+import { Solutions } from "@/components/landing/Solutions";
 import { Platforms } from "@/components/landing/Platforms";
 import { Contact } from "@/components/landing/Contact";
 import { Footer } from "@/components/landing/Footer";
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <Services />
         <Projects />
+        <Solutions />
         <Platforms />
         <WhatWeDo />
         <Faq />

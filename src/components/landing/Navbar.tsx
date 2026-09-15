@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "#productos", label: "Productos" },
+  { href: "#soluciones", label: "Soluciones" },
   { href: "#plataformas", label: "Plataformas" },
   { href: "#por-que", label: "Por qué BRY Labs" },
   { href: "#preguntas", label: "Preguntas" },
@@ -27,7 +28,7 @@ export function Navbar() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <a href="#top" className="font-display text-foreground">
           <span className="text-sm font-extrabold leading-none sm:text-base">
             BRY <span className="text-primary">Labs</span>
@@ -35,7 +36,7 @@ export function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+         <ul className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="hover:text-foreground transition-colors">
@@ -47,14 +48,14 @@ export function Navbar() {
 
         <a
           href="https://wa.me/59164133771"
-          className="hidden md:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors shadow-[0_0_20px_oklch(0.64_0.19_256/0.35)]"
+           className="hidden lg:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors shadow-[0_0_20px_oklch(0.64_0.19_256/0.35)]"
         >
           Solicitar demo
         </a>
 
         <button
           aria-label="Abrir menú"
-          className="md:hidden p-2 rounded-md hover:bg-surface-2"
+           className="lg:hidden p-2 rounded-md hover:bg-surface-2"
           onClick={() => setOpen((o) => !o)}
         >
           <div className="space-y-1.5">
@@ -65,7 +66,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl">
+         <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl">
           <div className="px-6 py-4 flex flex-col gap-3">
             {links.map((l) => (
               <a
