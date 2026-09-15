@@ -1,23 +1,30 @@
-import { ArrowUpRight, QrCode, Smartphone } from "lucide-react";
+import { CheckCircle2, FileCheck2, QrCode, ShieldCheck } from "lucide-react";
 import { SectionLabel } from "./SectionLabel";
 
-const tags = ["Live Commerce", "Fintech", "Bolivia", "TikTok"];
+const tags = [
+  "Modalidades SIN",
+  "CUFD y CUIS",
+  "Firma XMLDSig SHA-256",
+  "PDF con QR",
+  "Bitácora SIN",
+  "Multi-emisor",
+  "Alertas",
+  "WebComponent embebible",
+  "API REST OAuth 2.0",
+];
 
 export function Projects() {
   return (
     <section id="proyectos" className="relative py-24 md:py-32 overflow-hidden">
       <div className="relative mx-auto max-w-6xl px-6">
-        <SectionLabel>Proyectos</SectionLabel>
+        <SectionLabel>Facturalo · Facturación Electrónica SIN Bolivia</SectionLabel>
         <h2 className="mt-5 font-display font-bold text-[clamp(1.75rem,3.5vw,2.5rem)]">
-          Lo que estamos construyendo.
+          Emití facturas electrónicas cumpliendo con Impuestos Nacionales, sin dolores de cabeza.
         </h2>
 
-        <a
-          href="#"
-          className="mt-14 block group rounded-2xl border border-border bg-card/70 backdrop-blur overflow-hidden hover:border-primary/40 hover:shadow-elevated transition-all duration-300"
-        >
+        <article className="mt-14 block overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur transition-all duration-300 hover:border-primary/40 hover:shadow-elevated">
           <div className="grid md:grid-cols-5">
-            {/* visual — phone with QR */}
+               {/* visual — fiscal document */}
             <div className="md:col-span-2 relative aspect-[4/3] md:aspect-auto overflow-hidden border-b md:border-b-0 md:border-r border-border bg-[oklch(0.18_0.035_256)]">
               <div aria-hidden className="absolute inset-0 bg-grid opacity-40" />
               <div
@@ -31,29 +38,30 @@ export function Projects() {
 
               {/* phone mockup */}
               <div className="absolute inset-0 flex items-center justify-center p-6">
-                <div className="relative w-40 h-72 rounded-[2rem] border-2 border-border-strong bg-[oklch(0.13_0.03_256)] shadow-elevated p-2 rotate-[-6deg] group-hover:rotate-[-3deg] transition-transform duration-500">
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 rounded-full bg-border-strong" />
-                  <div className="h-full w-full rounded-[1.5rem] bg-gradient-to-br from-[oklch(0.95_0.05_60)] to-[oklch(0.85_0.18_50)] flex flex-col items-center justify-center gap-3 p-3">
-                    <div className="text-[8px] font-bold tracking-wider text-[oklch(0.25_0.08_50)] uppercase">
-                      Pagar con QR
+                <div className="relative h-72 w-48 rotate-[-4deg] rounded-lg border border-border-strong bg-surface-2 p-5 shadow-elevated transition-transform duration-500 hover:rotate-[-2deg]">
+                  <div className="flex h-full w-full flex-col gap-4 rounded-md border border-border bg-card p-4">
+                    <div className="flex items-center justify-between">
+                      <FileCheck2 className="h-7 w-7 text-primary" />
+                      <span className="text-[8px] font-bold uppercase text-primary">Factura en línea</span>
                     </div>
-                    <div className="bg-white rounded-lg p-2.5 shadow-lg">
-                      <QrCode className="w-16 h-16 text-[oklch(0.18_0.04_50)]" strokeWidth={2.5} />
+                    <div className="space-y-2">
+                      <span className="block h-1.5 w-full rounded bg-border-strong" />
+                      <span className="block h-1.5 w-4/5 rounded bg-border-strong" />
+                      <span className="block h-1.5 w-2/3 rounded bg-border-strong" />
                     </div>
-                    <div className="text-[10px] font-bold text-[oklch(0.18_0.04_50)]">
-                      Bs. 149.00
+                    <div className="mt-auto flex items-end justify-between">
+                      <div className="text-[10px] font-bold text-foreground">Bs. 1.249,00</div>
+                      <QrCode className="h-12 w-12 text-foreground" />
                     </div>
-                    <div className="text-[7px] text-[oklch(0.35_0.06_50)] font-medium">
-                      Vendelo · Live
-                    </div>
+                    <div className="text-[7px] text-muted-foreground">Documento fiscal validado por el SIN</div>
                   </div>
                 </div>
               </div>
 
               {/* logo overlay */}
               <div className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full border border-border bg-background/70 backdrop-blur px-2.5 py-1">
-                <Smartphone className="w-3 h-3 text-primary" />
-                <span className="text-[10px] font-mono text-muted-foreground">vendelo.app</span>
+                <ShieldCheck className="w-3 h-3 text-primary" />
+                <span className="text-[10px] font-mono text-muted-foreground">SIN Bolivia</span>
               </div>
             </div>
 
@@ -65,19 +73,15 @@ export function Projects() {
                     <span className="absolute inset-0 rounded-full bg-[oklch(0.7_0.16_150)] animate-pulse-dot" />
                     <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[oklch(0.75_0.18_150)]" />
                   </span>
-                  En desarrollo · 2026
+                  Cumplimiento fiscal integrado
                 </span>
               </div>
               <h3 className="mt-4 font-display font-bold text-2xl md:text-3xl text-foreground">
-                Vendelo{" "}
-                <span className="text-muted-foreground font-medium text-base">
-                  por BRY Labs
-                </span>
+                Facturalo
               </h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Plataforma de live commerce para vendedoras en TikTok Bolivia. Pagos
-                QR en tiempo real, modelo no-custodial, integración con banca
-                boliviana.
+                Cubre 13 tipos de documento fiscal del SIN y centraliza todo el proceso
+                de emisión, firma, validación y seguimiento.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
@@ -91,17 +95,13 @@ export function Projects() {
                 ))}
               </div>
 
-              <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
-                Ver proyecto
-                <ArrowUpRight className="h-4 w-4" />
+              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                <CheckCircle2 className="h-4 w-4" />
+                Listo para integrarse con tu operación
               </div>
             </div>
           </div>
-        </a>
-
-        <p className="mt-6 text-sm text-muted-foreground">
-          Más proyectos próximamente.
-        </p>
+        </article>
       </div>
     </section>
   );
