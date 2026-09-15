@@ -51,11 +51,9 @@ export function Solutions() {
             <div className="flex flex-wrap items-center justify-between gap-3"><Radio className="h-8 w-8 text-primary" /><span className="rounded-full border border-primary/30 bg-primary-soft px-3 py-1 text-xs font-semibold text-primary">Próximamente</span></div>
             <p className="mt-6 text-xs font-semibold uppercase text-primary">Live Commerce para TikTok</p>
             <h3 className="mt-2 font-display text-3xl font-bold">Vendelo</h3>
-            <p className="mt-4 text-muted-foreground">Convertí tus transmisiones de TikTok en una experiencia de compra fluida. El Comprador descubre, reserva y adquiere productos directamente durante el LIVE.</p>
-            <p className="mt-4 text-sm text-muted-foreground">Vendelo es la plataforma de live commerce nativa para TikTok creada por BRY Labs. Marcas, creadores y comercios monetizan sin fricción: el Comprador nunca abandona el LIVE.</p>
-            <FeatureList items={["Product Timeline™ — productos sincronizados con el LIVE", "Smart MiniBar™ — carrito, reserva, preguntas y compartir", "App nativa para Comprador y Vendedor", "Zero Installation — acceso web como PWA", "Buyer, Seller y Admin con permisos estrictos", "Escala desde MVP a Enterprise"]} />
-            <p className="mt-5 text-sm"><strong>Ideal para:</strong> marcas, creadores y comercios que venden durante los LIVES.</p>
-            <p className="mt-3 text-sm font-semibold text-primary">En construcción · Desarrollo Blueprint-first</p>
+            <p className="mt-4 font-display text-lg font-semibold text-foreground">El futuro del live commerce en Latinoamérica.</p>
+            <p className="mt-4 text-sm text-muted-foreground">Vendelo es el próximo producto de BRY Labs para el ecosistema de comercio en vivo. Estamos construyendo algo distinto — pensado para creadores, marcas y comercios que ya venden a su comunidad y necesitan una herramienta que esté a la altura.</p>
+            <p className="mt-5 text-sm font-semibold text-primary">🟡 En construcción con acceso temprano por lista de espera</p>
             <a href={`${whatsapp}?text=Hola%20BRY%20Labs%2C%20quiero%20sumarme%20a%20la%20lista%20de%20espera%20de%20Vendelo`} className="mt-6 inline-flex rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary-hover">Sumate a la lista de espera</a>
           </article>
 
