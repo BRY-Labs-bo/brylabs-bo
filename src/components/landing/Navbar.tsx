@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#que-hacemos", label: "Qué hacemos" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#nosotros", label: "Nosotros" },
+  { href: "#productos", label: "Productos" },
+  { href: "#plataformas", label: "Plataformas" },
+  { href: "#por-que", label: "Por qué BRY Labs" },
+  { href: "#preguntas", label: "Preguntas" },
   { href: "#contacto", label: "Contacto" },
 ];
 
@@ -27,8 +28,11 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="font-display font-extrabold text-lg tracking-tight text-foreground">
-          BRY<span className="text-primary">.</span>Labs
+        <a href="#top" className="font-display text-foreground">
+          <span className="text-sm font-extrabold leading-none sm:text-base">
+            BRY <span className="text-primary">Labs</span>
+            <span className="font-medium text-muted-foreground"> — Business Result Yield</span>
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -42,10 +46,10 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contacto"
+          href="https://wa.me/59164133771"
           className="hidden md:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors shadow-[0_0_20px_oklch(0.64_0.19_256/0.35)]"
         >
-          Trabajemos juntos
+          Solicitar demo
         </a>
 
         <button
@@ -74,11 +78,11 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="https://wa.me/59164133771"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
             >
-              Trabajemos juntos
+              Solicitar demo
             </a>
           </div>
         </div>

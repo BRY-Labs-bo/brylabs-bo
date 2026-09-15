@@ -28,8 +28,8 @@ export function Contact() {
           Hablemos.
         </h2>
         <p className="mt-4 max-w-2xl text-muted-foreground text-base md:text-lg">
-          ¿Tenés un proyecto en mente? Contanos qué estás buscando. Respondemos en
-          24 horas.
+          ¿Listo para modernizar tu negocio? Agendemos una demo y veamos qué solución se adapta
+          mejor a tu empresa.
         </p>
 
         <div className="mt-14 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -43,9 +43,7 @@ export function Contact() {
                 <Mail className="h-5 w-5" />
               </span>
               <div className="flex-1">
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                  Email
-                </div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
                 <div className="font-display font-semibold text-foreground">
                   contacto@brylabs.bo
                 </div>
@@ -54,7 +52,7 @@ export function Contact() {
             </a>
 
             <a
-              href="https://wa.me/59170184456"
+              href="https://wa.me/59164133771?text=Hola%20BRY%20Labs%2C%20quiero%20agendar%20una%20demo"
               className="group flex items-center gap-4 rounded-xl border border-border bg-card/70 backdrop-blur p-5 hover:border-primary/40 hover:shadow-elevated transition-all"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-soft text-primary border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -64,15 +62,13 @@ export function Contact() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">
                   WhatsApp
                 </div>
-                <div className="font-display font-semibold text-foreground">
-                  +591 70184456
-                </div>
+                <div className="font-display font-semibold text-foreground">+591 64133771</div>
               </div>
               <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
             </a>
 
             <div className="rounded-xl border border-dashed border-border p-5 text-sm text-muted-foreground">
-              La Paz, Bolivia · Lun a Vie, 9:00 – 18:00 (BOT)
+              brylabs.bo · La Paz - Bolivia
             </div>
           </div>
 
@@ -82,19 +78,32 @@ export function Contact() {
             className="rounded-2xl border border-border bg-card/80 backdrop-blur p-6 md:p-8 shadow-elevated space-y-4"
           >
             <Field label="Nombre" htmlFor="name">
-              <input id="name" name="name" required placeholder="Tu nombre" className="form-input" />
+              <input
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+                className="form-input"
+              />
             </Field>
             <Field label="Email o WhatsApp" htmlFor="contact">
-              <input id="contact" name="contact" required placeholder="hola@empresa.com" className="form-input" />
+              <input
+                id="contact"
+                name="contact"
+                required
+                placeholder="hola@empresa.com"
+                className="form-input"
+              />
             </Field>
             <Field label="¿Qué necesitás?" htmlFor="need">
               <select id="need" name="need" defaultValue="" required className="form-input">
-                <option value="" disabled>Seleccioná una opción</option>
-                <option>App móvil</option>
-                <option>Implementación de IA</option>
-                <option>Optimización de procesos</option>
-                <option>Fintech</option>
-                <option>Consultoría</option>
+                <option value="" disabled>
+                  Seleccioná una opción
+                </option>
+                <option>Scibol ERP</option>
+                <option>Facturalo</option>
+                <option>Plataformas BRY Labs</option>
+                <option>Demo general</option>
                 <option>Otro</option>
               </select>
             </Field>
@@ -113,7 +122,7 @@ export function Contact() {
               type="submit"
               className="w-full inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors shadow-[0_0_30px_oklch(0.64_0.19_256/0.45)]"
             >
-              Enviar mensaje
+              Solicitar demo
             </button>
 
             {sent && (
